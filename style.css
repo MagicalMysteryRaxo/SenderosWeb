@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background: #cdcdcd;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  background-color: #f7f7f7;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+  flex-wrap: nowrap;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+/* Photos banner */
+.photo-banner {
+  background-color: #c4b1da;
+  display: flex;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 200px;
+  margin: 50px;
+}

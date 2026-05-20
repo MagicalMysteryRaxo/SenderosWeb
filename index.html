@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>New Chapter</title>
 
+    <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="style.css" />
     <link
       rel="shortcut icon"
@@ -22,10 +23,108 @@
   <body>
     <div id="navbar-container"></div>
 
-    <div class="photo-banner">
-      <img src="" alt="" />
-    </div>
+    <section class="hero-slider">
+      <div class="slide active">
+        <img
+          src="images/home-slider/slide-1.jpg"
+          alt="Woman and child walking toward a new beginning"
+        />
+        <div class="slide-content">
+          <p class="hero-eyebrow">New Chapter Initiative</p>
+          <h1>
+            Helping women and children find safety, stability, and a path
+            forward.
+          </h1>
+          <a href="#" class="hero-button">Learn More</a>
+        </div>
+      </div>
 
-    <script src="menu-script.js"></script>
+      <div class="slide">
+        <img
+          src="images/home-slider/slide-2.jpg"
+          alt="Supportive community for women rebuilding their lives"
+        />
+        <div class="slide-content">
+          <p class="hero-eyebrow">A Safe Path Forward</p>
+          <h1>Because rebuilding a life takes more than emergency help.</h1>
+          <a href="#" class="hero-button">How We Help</a>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img
+          src="images/home-slider/slide-3.jpg"
+          alt="Hopeful mother and child in warm sunlight"
+        />
+        <div class="slide-content">
+          <p class="hero-eyebrow">Dignity. Support. Independence.</p>
+          <h1>Every woman deserves the chance to begin again with support.</h1>
+          <a href="#" class="hero-button">Donate</a>
+        </div>
+      </div>
+
+      <button class="slider-arrow prev">&#10094;</button>
+      <button class="slider-arrow next">&#10095;</button>
+
+      <div class="slider-dots">
+        <button class="dot active"></button>
+        <button class="dot"></button>
+        <button class="dot"></button>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <section class="footer-main">
+        <div class="footer-column">
+          <h3>Get good news in your Inbox</h3>
+          <p>Receive updates about our mission, progress, and ways to help.</p>
+          <a href="#" class="footer-button">Sign Up</a>
+
+          <h3>Help build a new chapter</h3>
+          <a href="#" class="footer-button">Donate Now</a>
+        </div>
+
+        <div class="footer-column">
+          <h3>Contact Info</h3>
+          <p>New Chapter Initiative</p>
+          <p>
+            <br />
+            T: 907-217-8305
+          </p>
+          <p>
+            <a href="mailto:connect@newchapterinitiative.org"
+              >connect@newchapterinitiative.org</a
+            >
+          </p>
+
+          <div class="footer-socials">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="footer-bottom">
+        <img
+          src="images/favicon-logo/logo.png"
+          alt="New Chapter logo"
+          class="footer-logo"
+        />
+
+        <p>© 2026 New Chapter Initiative. All rights reserved.</p>
+
+        <div class="footer-links">
+          <a href="#">Sitemap</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Disclaimer</a>
+          <a href="#">Donor Confidentiality</a>
+        </div>
+      </section>
+    </footer>
+
+    <script src="js/menu-script.js"></script>
+    <script src="js/slider.js"></script>
   </body>
 </html>

@@ -5,24 +5,31 @@
   padding: 0;
 }
 
-/* Mission */
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background: #f6f5f4;
+}
+
+/* Team */
 .page-content {
   background: #fbeddf;
 }
 
-.mission-hero {
+.team-hero {
   position: relative;
   width: 100%;
 }
 
-.photo-banner-mission {
+.photo-banner-team {
   width: 100%;
   height: 500px;
   overflow: hidden; /* Hides anything outside the box */
   position: relative;
 }
 
-.photo-banner-mission::after {
+.photo-banner-team::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -34,7 +41,7 @@
   z-index: 1;
 }
 
-.photo-banner-mission img {
+.photo-banner-team img {
   width: 100%;
   height: 100%;
   display: block;
@@ -42,7 +49,7 @@
   object-position: center 35%;
 }
 
-.mission-block {
+.team-block {
   background-color: #705642ed;
 
   font-family: "Finlandica Headline", sans-serif;
@@ -62,7 +69,7 @@
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
 }
 
-.mission-intro {
+.team-intro {
   max-width: 950px;
   margin: 0 auto;
   padding: 80px 24px 40px;
@@ -78,7 +85,7 @@
   margin-bottom: 16px;
 }
 
-.mission-intro h1 {
+.team-intro h1 {
   font-family: "Finlandica Headline", sans-serif;
   font-size: clamp(42px, 6vw, 72px);
   line-height: 1;
@@ -86,7 +93,7 @@
   margin-bottom: 28px;
 }
 
-.mission-lead {
+.team-lead {
   font-size: 22px;
   line-height: 1.7;
   color: #5a4434;
@@ -94,68 +101,12 @@
   margin: 0 auto;
 }
 
-.mission-cards {
-  max-width: 1150px;
-  margin: 0 auto;
-  padding: 30px 24px 90px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-
-.mission-card {
-  background: #fbf9f6;
-  padding: 36px;
-  border-radius: 22px;
-  box-shadow: 0 12px 35px rgba(112, 86, 66, 0.12);
-}
-
-.mission-card h2 {
-  font-family: "Finlandica Headline", sans-serif;
-  font-size: 34px;
-  color: #705642;
-  margin-bottom: 16px;
-}
-
-.mission-card p {
-  font-size: 18px;
-  line-height: 1.7;
-  color: #3d3028;
-}
-
-/* Responsive Design */
 @media (max-width: 800px) {
-  .photo-banner-mission img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
-    transform: none;
+  .team-hero {
+    height: 300px;
   }
 
-  .mission-block {
-    bottom: -28px;
-    min-width: 170px;
-    padding: 12px 24px;
-    font-size: 30px;
-  }
-
-  .mission-intro {
-    padding: 55px 22px 30px;
-  }
-
-  .mission-intro h1 {
-    font-size: 40px;
-    line-height: 1.05;
-  }
-
-  .mission-lead {
-    font-size: 18px;
-    line-height: 1.6;
-  }
-
-  .mission-cards {
-    grid-template-columns: 1fr;
-    padding: 25px 22px 70px;
+  .photo-banner-team {
+    height: 300px;
   }
 }

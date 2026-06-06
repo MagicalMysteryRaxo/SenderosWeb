@@ -12,6 +12,30 @@ body {
   background: #fbeddf;
 }
 
+h1 {
+  font-family: "Finlandica Headline";
+  display: flex;
+  font-size: 48px;
+  font-weight: bold;
+  justify-content: center;
+  color: #705642;
+  padding: 30px 0 30px 0;
+}
+
+h2 {
+  font-family: "Finlandica Headline";
+  display: flex;
+  font-size: 32px;
+  font-weight: bold;
+  justify-content: left;
+  color: #705642;
+  padding: 30px 0 30px 140px;
+}
+
+p {
+  padding: 0 140px 20px 140px;
+}
+
 /* Navbar Styles */
 .navbar {
   display: flex;

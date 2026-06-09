@@ -1,0 +1,375 @@
+/* Responsive Design */
+@media (max-width: 750px) {
+  /*Global*/
+  h1 {
+    justify-content: center;
+    font-size: 40px;
+    padding: 20px 20px 40px 40px;
+  }
+
+  p {
+    padding: 0 0px 0 0;
+  }
+
+  /*Navbar Menu*/
+  .navbar {
+    padding: 12px 18px;
+  }
+
+  .navbar .container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .hamburger {
+    display: flex;
+    z-index: 1001;
+    grid-column: 1;
+    grid-row: 1;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    color: #705642;
+    position: relative;
+    z-index: 1001;
+    transition: 0.3s ease;
+  }
+
+  .hamburger.active {
+    position: fixed;
+    top: 34px;
+    left: 22px;
+    color: #705642;
+  }
+
+  .hamburger i {
+    transition: transform 0.3s ease;
+  }
+
+  .hamburger.active i {
+    transform: rotate(180deg);
+  }
+
+  .hamburger.active i::before {
+    content: "\f00d";
+  }
+
+  .logo {
+    grid-column: 2;
+    justify-content: center;
+  }
+
+  .logo img {
+    height: 95px;
+    border-radius: 18px;
+  }
+
+  .main-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 82%;
+    max-width: 340px;
+    height: 100vh;
+
+    background: #fbf9f6;
+    z-index: 999;
+    padding: 115px 24px 30px;
+    transition: left 0.35s ease;
+    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.15);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .main-menu.active {
+    left: 0;
+  }
+
+  .main-menu ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .main-menu li {
+    width: 100%;
+  }
+
+  .main-menu a {
+    width: 100%;
+    display: block;
+    padding: 18px 0;
+    font-size: 26px;
+    text-align: left;
+    letter-spacing: 1px;
+  }
+
+  .main-menu ul li {
+    width: 100%;
+  }
+
+  .main-menu ul li a {
+    width: 100%;
+    padding: 14px 16px;
+    display: block;
+  }
+
+  .main-menu ul li + li {
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .menu-overlay {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.651);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+    z-index: 998;
+  }
+
+  .menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .donate-button {
+    width: 100%;
+    margin: 30px 0 0;
+    padding: 16px 20px;
+    font-size: 18px;
+  }
+
+  /* Index */
+  .index-content p {
+    padding: 0 30px 30px 30px;
+  }
+
+  .footer-column {
+    text-align: center;
+  }
+
+  .footer-socials {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 3px;
+    padding: 55px 40px;
+    justify-content: center;
+  }
+
+  .footer-button {
+    justify-content: center;
+    display: flex;
+    margin: 12px auto 35px;
+    width: 180px;
+    text-align: center;
+    padding: 12px 24px;
+  }
+
+  .footer-column h3 {
+    font-size: 28px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .footer-links a {
+    border-right: none;
+  }
+
+  .hero-slider {
+    height: 520px;
+  }
+
+  .slide-content {
+    left: 24px;
+    right: 24px;
+    max-width: none;
+  }
+
+  .slide-content h1 {
+    font-size: 44px;
+  }
+
+  .hero-eyebrow {
+    font-size: 18px;
+  }
+
+  .slider-arrow {
+    display: none;
+  }
+
+  /* About project */
+  .about-content p {
+    padding: 0 50px;
+  }
+
+  .about-content h2 {
+    padding: 25px 0 20px 40px;
+    font-size: 24px;
+  }
+
+  .about-project-cards {
+    gap: 40px;
+    grid-template-columns: repeat(2, 200px);
+    padding: 60px 0px 0 20px;
+  }
+
+  .about-card {
+    height: 180px;
+    width: 180px;
+    padding: auto;
+  }
+
+  .about-more h2 {
+    padding: 45px 30px 0px 40px;
+    font-size: 36px;
+  }
+
+  .about-card h3 {
+    position: absolute;
+    font-size: 20px;
+    top: 50%;
+    left: 50%;
+  }
+
+  /* Mission */
+  .photo-banner-mission img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    transform: none;
+  }
+
+  .mission-block {
+    bottom: -28px;
+    min-width: 170px;
+    padding: 12px 24px;
+    font-size: 30px;
+  }
+
+  .mission-intro {
+    padding: 55px 22px 30px;
+  }
+
+  .mission-intro h1 {
+    font-size: 40px;
+    line-height: 1.05;
+  }
+
+  .mission-lead {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .mission-cards {
+    grid-template-columns: 1fr;
+    padding: 25px 22px 70px;
+  }
+
+  .mission-card h2 {
+    padding: 0 0 0 0;
+    justify-content: center;
+  }
+
+  /* Foundations */
+  .foundations-intro {
+    max-width: 100%;
+  }
+
+  .foundations-intro h1 {
+    padding: 35px 24px 28px;
+    line-height: 1.05;
+  }
+
+  .foundations-intro h2 {
+    padding: 35px 8px 28px;
+  }
+
+  .found-img-card {
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+    padding: 28px 16px;
+  }
+
+  .foundations-img {
+    max-width: 90%;
+    margin: 20px 0;
+  }
+
+  .foundations-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 35px 0 70px;
+    margin: 0;
+  }
+
+  .foundation-card {
+    border-radius: 34px 34px 0 0;
+    padding: 36px 30px 42px;
+    margin-top: -18px;
+    box-shadow: 0 -8px 22px rgba(112, 86, 66, 0.08);
+    position: relative;
+  }
+
+  .foundation-card:first-child {
+    margin-top: 0;
+  }
+
+  .foundation-card:nth-child(odd) {
+    background: #fbf9f6;
+  }
+
+  .foundation-card:nth-child(even) {
+    background: #f3e7dc;
+  }
+
+  .foundation-card h2 {
+    justify-content: center;
+    font-size: 34px;
+    padding: 0;
+  }
+
+  .foundation-card p {
+    padding: 0;
+    font-size: 17px;
+    line-height: 1.75;
+    text-align: left;
+  }
+
+  /* What's coming */
+  .coming-content h1 {
+    text-align: center;
+    display: flex;
+    justify-self: center;
+  }
+
+  .coming-content p {
+    padding: 10px 20px 10px 30px;
+  }
+
+  /* Team */
+  .team-hero {
+    height: 300px;
+  }
+
+  .photo-banner-team {
+    height: 300px;
+  }
+}

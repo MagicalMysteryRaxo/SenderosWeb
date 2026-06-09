@@ -1,16 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Finlandica+Headline:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  background: #f6f5f4;
-}
 
 /* Donation Page */
 
@@ -51,7 +39,7 @@ body {
   line-height: 1.7;
   color: #2a211c;
   max-width: 850px;
-  padding: 20px 50px 20px 50px;
+  padding: 20px 30px 20px 10px;
 }
 
 .donation-panel {

@@ -20,3 +20,9 @@ fetch("menu.html")
     });
   })
   .catch((error) => console.error("Failed to load menu:", error));
+
+fetch("footer.html")
+  .then((response) => response.text())
+  .then((html) => {
+    document.querySelector(".footer-bottom").innerHTML = html;
+  });

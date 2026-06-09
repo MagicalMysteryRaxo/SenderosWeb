@@ -16,7 +16,7 @@ body {
   font-family: "Monsterrat", sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  background: #faf6f0;
+  background: #b7c8b0;
 }
 
 h1 {
@@ -41,7 +41,7 @@ h2 {
 
 h3 {
   font-family: "Lora";
-  color: #2f6f68;
+  color: #18453f;
 }
 
 p {
@@ -51,27 +51,30 @@ p {
   color: #2f3a3a;
 }
 
+.eyebrow {
+  color: #3b4545;
+}
+
 /* Navbar Styles */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px;
-  background-color: #faf6f0;
+  background-color: #fffdfa;
   box-shadow: rgba(0, 0, 0, 0.518) 0px 8px 24px;
 }
 
 .hamburger {
-  color: #c3c3c3;
+  color: #18453f;
   display: none;
   font-size: 24px;
   cursor: pointer;
 }
 
 .logo img {
-  height: 100px;
+  height: 80px;
   width: auto;
-  border-radius: 20px;
   padding: 0 0 0 140px;
 }
 

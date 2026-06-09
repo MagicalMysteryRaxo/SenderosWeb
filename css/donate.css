@@ -1,9 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Finlandica+Headline:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 
 /* Donation Page */
+#logo-donate {
+  display: none;
+  border-radius: 0;
+}
 
 .donation-page {
-  background: #fbf9f6;
+  background: #e5ede3;
 }
 
 .donation-layout {
@@ -20,8 +24,10 @@
   font-family: "Finlandica Headline", sans-serif;
   font-size: clamp(44px, 6vw, 72px);
   line-height: 1;
-  color: #3d3028;
+  color: #18453f;
   margin-bottom: 32px;
+
+  display: flex;
 }
 
 .donation-story img {
@@ -53,7 +59,7 @@
 }
 
 #back-to-site {
-  color: #9a7253;
+  color: #2f6f68;
   font-size: 16px;
   cursor: pointer;
   font-weight: bold;
@@ -85,144 +91,4 @@
   height: 100%;
   border: 0;
   display: block;
-}
-
-@media (max-width: 800px) {
-  .donation-page {
-    background: #ffffff;
-  }
-
-  .donation-layout {
-    display: flex;
-    flex-direction: column;
-    padding: 36px 22px 60px;
-    gap: 28px;
-  }
-
-  .donation-story {
-    order: 1;
-  }
-
-  .donation-story .eyebrow {
-    display: none;
-  }
-
-  .donation-story h1 {
-    font-size: 44px;
-    line-height: 1.15;
-    margin-bottom: 28px;
-  }
-
-  .donation-story img {
-    display: none;
-  }
-
-  .donation-story p {
-    display: none;
-  }
-
-  .donation-panel {
-    order: 2;
-    position: static;
-    width: 100%;
-    padding: 0;
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-    background: transparent;
-  }
-
-  .secure-label {
-    font-size: 30px;
-    margin-bottom: 26px;
-  }
-
-  .secure-label i {
-    font-size: 34px;
-  }
-
-  .giving-tabs {
-    gap: 14px;
-    margin-bottom: 24px;
-  }
-
-  .giving-tabs button {
-    padding: 16px 10px;
-    font-size: 20px;
-    border-radius: 10px;
-    background: white;
-  }
-
-  .giving-tabs .active {
-    background: #fbeddf;
-    color: #3d3028;
-    border: 2px solid #705642;
-  }
-
-  .donation-amounts {
-    gap: 16px;
-  }
-
-  .donation-amounts button {
-    background: white;
-    border: 1px solid rgba(61, 48, 40, 0.25);
-    border-radius: 12px;
-    padding: 22px 24px;
-  }
-
-  .donation-amounts button strong {
-    font-size: 26px;
-    margin-bottom: 10px;
-  }
-
-  .donation-amounts button span {
-    font-size: 21px;
-    line-height: 1.55;
-  }
-
-  .donation-amounts button:hover,
-  .donation-amounts .selected {
-    border: 2px solid #705642;
-    background: #fbeddf;
-    box-shadow: none;
-  }
-
-  .dedication-option {
-    font-size: 20px;
-    margin: 30px 0 22px;
-  }
-
-  .dedication-option input {
-    width: 28px;
-    height: 28px;
-  }
-
-  .donation-main-button {
-    padding: 20px 24px;
-    font-size: 22px;
-    border-radius: 12px;
-  }
-
-  .donation-small-note {
-    border-top: 1px solid rgba(61, 48, 40, 0.18);
-    padding-top: 28px;
-    margin-top: 40px;
-    font-size: 16px;
-    text-align: left;
-  }
-
-  .donation-small-note::after {
-    content: "\A Is my donation secure?\A Is this donation tax-deductible?\A Can I cancel my monthly gift?";
-    white-space: pre-line;
-    display: block;
-    margin-top: 20px;
-    line-height: 2;
-    color: #5a4434;
-    text-decoration: underline;
-  }
-
-  .zeffy-embed-wrapper {
-    height: 880px;
-    border-radius: 0;
-  }
 }

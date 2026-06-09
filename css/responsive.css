@@ -11,30 +11,41 @@
     padding: 0 0px 0 0;
   }
 
+  .title-block {
+    bottom: -28px;
+    min-width: 170px;
+    padding: 12px 24px;
+    font-size: 30px;
+  }
+
   /*Navbar Menu*/
   .navbar {
+    position: relative;
     padding: 12px 18px;
   }
 
   .navbar .container {
     width: 100%;
-    display: grid;
-    grid-template-columns: 60px 1fr;
+    height: 90px;
+    display: flex;
+    justify-content: center;
     align-items: center;
+    position: relative;
     gap: 12px;
   }
 
   .hamburger {
     display: flex;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+
     z-index: 1001;
-    grid-column: 1;
-    grid-row: 1;
-    justify-content: center;
-    align-items: center;
+
     font-size: 32px;
-    color: #705642;
-    position: relative;
-    z-index: 1001;
+    color: #18453f;
+    padding: 0 30px 0 0;
     transition: 0.3s ease;
   }
 
@@ -42,7 +53,7 @@
     position: fixed;
     top: 34px;
     left: 22px;
-    color: #705642;
+    color: #18453f;
   }
 
   .hamburger i {
@@ -58,13 +69,22 @@
   }
 
   .logo {
-    grid-column: 2;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
     justify-content: center;
+    align-items: center;
+
+    padding: 0;
   }
 
   .logo img {
-    height: 95px;
-    border-radius: 18px;
+    height: 75px;
+    width: auto;
+    padding: 0 0 0 20px;
+    justify-content: center;
   }
 
   .main-menu {
@@ -247,19 +267,17 @@
   }
 
   /* Mission */
+  .photo-banner-mission {
+    width: 100%;
+    height: 400px;
+  }
+
   .photo-banner-mission img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center center;
     transform: none;
-  }
-
-  .mission-block {
-    bottom: -28px;
-    min-width: 170px;
-    padding: 12px 24px;
-    font-size: 30px;
   }
 
   .mission-intro {
@@ -304,19 +322,19 @@
     border-radius: 0;
     box-shadow: none;
     margin: 0;
-    padding: 28px 16px;
+    padding: 18px 6px;
   }
 
   .foundations-img {
     max-width: 90%;
-    margin: 20px 0;
+    margin: 10px 0;
   }
 
   .foundations-cards {
     display: flex;
     flex-direction: column;
     gap: 0;
-    padding: 35px 0 70px;
+    padding: 35px 0 0;
     margin: 0;
   }
 
@@ -337,7 +355,7 @@
   }
 
   .foundation-card:nth-child(even) {
-    background: #f3e7dc;
+    background: #c9d5c5;
   }
 
   .foundation-card h2 {
@@ -371,5 +389,71 @@
 
   .photo-banner-team {
     height: 300px;
+  }
+
+  .title-block.team {
+    min-width: 280px;
+    font-size: 40px;
+  }
+
+  /* D O N A T E */
+  #logo-donate {
+    display: flex;
+    width: 180px;
+    height: auto;
+  }
+
+  .donation-layout {
+    display: flex;
+    flex-direction: column;
+    padding: 36px 30px 60px;
+    gap: 28px;
+  }
+
+  .donation-story {
+    width: 100%;
+  }
+
+  .donation-story h1 {
+    order: 1;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    margin: 0 0 22px;
+
+    font-size: 42px;
+    line-height: 1.1;
+  }
+
+  .donation-story .eyebrow,
+  .donation-story img,
+  .donation-story p {
+    display: none;
+  }
+
+  .donation-panel {
+    width: 100%;
+  }
+
+  .zeffy-embed-wrapper {
+    width: 100%;
+    height: 900px;
+    border-radius: 0;
+  }
+
+  .zeffy-iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+    border: 0;
+  }
+
+  #back-to-site {
+    display: inline-block;
+    margin-bottom: 24px;
   }
 }

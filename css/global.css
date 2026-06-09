@@ -78,6 +78,10 @@ p {
   padding: 0 0 0 140px;
 }
 
+#logo-mobile {
+  display: none;
+}
+
 .navbar .container {
   width: 100%;
   display: flex;
@@ -236,7 +240,7 @@ p {
 }
 
 .footer-button:hover {
-  background: #705642;
+  background: #18453f;
   color: white;
 }
 
@@ -250,7 +254,7 @@ p {
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  background: #705642;
+  background: #18453f;
   color: white;
   display: flex;
   align-items: center;

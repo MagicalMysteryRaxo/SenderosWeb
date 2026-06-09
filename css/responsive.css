@@ -27,6 +27,7 @@
   .navbar .container {
     width: 100%;
     height: 90px;
+    max-height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,7 +38,7 @@
   .hamburger {
     display: flex;
     position: absolute;
-    left: 20px;
+    left: 0px;
     top: 50%;
     transform: translateY(-50%);
 
@@ -51,8 +52,8 @@
 
   .hamburger.active {
     position: fixed;
-    top: 34px;
-    left: 22px;
+    top: 54px;
+    left: 30px;
     color: #18453f;
   }
 
@@ -81,10 +82,18 @@
   }
 
   .logo img {
-    height: 75px;
-    width: auto;
+    max-width: 60vw;
+    height: auto;
     padding: 0 0 0 20px;
     justify-content: center;
+  }
+
+  #logo-mobile {
+    display: flex;
+    position: absolute;
+    height: 50px;
+    width: auto;
+    top: 26px;
   }
 
   .main-menu {
@@ -162,7 +171,7 @@
 
   .donate-button {
     width: 100%;
-    margin: 30px 0 0;
+    transform: translateY(-50%);
     padding: 16px 20px;
     font-size: 18px;
   }
@@ -170,6 +179,20 @@
   /* Index */
   .index-content p {
     padding: 0 30px 30px 30px;
+  }
+
+  .hero-button {
+    display: flex;
+    justify-self: center;
+
+    max-width: 60%;
+    padding: 15px 28px;
+  }
+
+  .slide-content h1 {
+    font-size: clamp(36px, 6vw, 48px);
+    line-height: 0.98;
+    padding: 0;
   }
 
   .footer-column {
@@ -243,25 +266,28 @@
   }
 
   .about-project-cards {
-    gap: 40px;
-    grid-template-columns: repeat(2, 200px);
-    padding: 60px 0px 0 20px;
+    gap: 30px;
+    grid-template-columns: repeat(2, 150px);
+    padding: 60px 0px 0 0px;
   }
 
   .about-card {
-    height: 180px;
-    width: 180px;
-    padding: auto;
+    height: 170px;
+    width: 160px;
+    padding: 0;
   }
 
   .about-more h2 {
-    padding: 45px 30px 0px 40px;
-    font-size: 36px;
+    display: flex;
+    padding: 45px 0px 0px 20px;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
   }
 
   .about-card h3 {
     position: absolute;
-    font-size: 20px;
+    font-size: 18px;
     top: 50%;
     left: 50%;
   }
@@ -456,4 +482,76 @@
     display: inline-block;
     margin-bottom: 24px;
   }
+}
+
+/* S M A L L  ○  S C R E E N S */
+@media (max-width: 350px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .navbar {
+    padding: 8px 10px;
+  }
+
+  .navbar .container {
+    height: 25px;
+    width: 100%;
+  }
+
+  .hamburger {
+    left: 5px;
+    font-size: 20px;
+    padding: 0;
+  }
+
+  .logo img {
+    height: AUTO;
+    max-width: 100px;
+    padding: 0;
+  }
+
+  .main-menu {
+    width: 88%;
+    max-width: none;
+    padding: 95px 18px 24px;
+  }
+
+  .main-menu a {
+    font-size: 20px;
+    padding: 14px 0;
+    letter-spacing: 0;
+  }
+
+  .donate-button {
+    font-size: 16px;
+    padding: 14px;
+  }
+
+  .hero-slider {
+    height: 430px;
+    overflow: hidden;
+  }
+
+  .slide-content {
+    left: 16px;
+    right: 16px;
+  }
+
+  .slide-content h1 {
+    font-size: 34px;
+    line-height: 1;
+    word-break: normal;
+  }
+
+  .hero-eyebrow {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+  /* index */
 }

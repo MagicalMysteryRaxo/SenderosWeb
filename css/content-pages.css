@@ -241,6 +241,7 @@
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 16px;
+  text-align: center;
 }
 
 .mission-intro h1 {
@@ -466,6 +467,20 @@
 }
 
 /* Team */
+.team-intro {
+  max-width: 100vw;
+  padding: 0 40px;
+  text-align: justify;
+  align-items: center;
+}
+
+.content-white {
+  display: block;
+
+  background-color: #f7f2ec;
+
+  padding: 80px 40px 40px;
+}
 
 .team-hero {
   position: relative;
@@ -499,26 +514,67 @@
   object-position: center 35%;
 }
 
-.team-intro {
-  max-width: 950px;
-  margin: 0 auto;
-  padding: 80px 24px 40px;
-  text-align: center;
-}
-
 .team-intro h1 {
   font-family: "Finlandica Headline", sans-serif;
   font-size: clamp(42px, 6vw, 72px);
   line-height: 1;
-  margin-bottom: 28px;
+  padding: 0 0 58px;
 }
 
 .team-lead {
-  font-size: 22px;
+  font-size: 18px;
   line-height: 1.7;
   color: #5a4434;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  padding: 50px;
+  gap: 80px;
+}
+
+.team-mem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #c5d5c8;
+  border-radius: 12px;
+  padding: 40px;
+}
+
+.team-img-sizing {
+  height: 300px;
+  width: 250px;
+  overflow: hidden;
+  align-items: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 8px 22px rgba(112, 86, 66, 0.25);
+}
+.team-mem h3 {
+  padding: 30px 10px;
+  font-size: 28px;
+}
+
+.team-mem img {
+  width: 250px;
+  height: auto;
+}
+
+.founder-message {
+  padding: 30px;
+}
+
+.signature {
+  text-align: right;
+  padding: 40px;
 }
 
 /* What's coming */

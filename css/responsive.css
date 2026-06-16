@@ -8,6 +8,7 @@
   }
 
   p {
+    font-size: 14px;
     padding: 0 0px 0 0;
   }
 
@@ -91,9 +92,9 @@
   #logo-mobile {
     display: flex;
     position: absolute;
-    height: 50px;
+    height: 80px;
     width: auto;
-    top: 26px;
+    top: 10px;
   }
 
   .main-menu {
@@ -409,6 +410,57 @@
   }
 
   /* Team */
+  .team-intro {
+    max-width: 100vw;
+    padding: 0;
+    text-align: justify;
+    align-items: center;
+  }
+
+  .content-white {
+    padding: 50px 20px;
+  }
+
+  .team-lead {
+    font-size: 16px;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+    padding: 0 0 40px;
+    gap: 10px;
+  }
+
+  .team-mem:first-child {
+    margin-top: 0;
+  }
+
+  .team-mem:nth-child(odd) {
+    background: #e3e8e1;
+  }
+
+  .team-mem:nth-child(even) {
+    background: #cfd8cc;
+  }
+
+  .team-mem {
+    padding: 10px;
+  }
+
+  .team-img-sizing {
+    height: 200px;
+    width: 150px;
+  }
+
+  .team-mem img {
+    width: 150px;
+    height: auto;
+  }
+
+  .team-mem h3 {
+    text-align: center;
+  }
+
   .team-hero {
     height: 300px;
   }
@@ -420,6 +472,14 @@
   .title-block.team {
     min-width: 280px;
     font-size: 40px;
+  }
+
+  .founder-message {
+    padding: 0;
+  }
+
+  .founder-message p {
+    font-size: 16px;
   }
 
   /* D O N A T E */

@@ -107,7 +107,7 @@
         <div class="footer-column">
           <h3>Get good news in your Inbox</h3>
           <p>Receive updates about our mission, progress, and ways to help.</p>
-          <a href="#" class="footer-button">Sign Up</a>
+          <a href="#" class="footer-button newsletter-signup">Sign Up</a>
 
           <h3>Help build a new chapter</h3>
           <a
@@ -118,6 +118,43 @@
             data-location="footer"
             >Donate Now</a
           >
+        </div>
+
+        <div id="newsletter-popup" class="newsletter-popup">
+          <div class="newsletter-box">
+            <button id="close-newsletter" class="close-newsletter">
+              &times;
+            </button>
+
+            <h2>Join our newsletter</h2>
+            <p>
+              Get updates about New Chapter, our progress, and ways to help.
+            </p>
+
+            <form id="newsletter-form">
+              <input
+                type="text"
+                id="first-name"
+                placeholder="First name"
+                required
+              />
+              <input
+                type="text"
+                id="last-name"
+                placeholder="Last name"
+                required
+              />
+              <input
+                type="email"
+                id="email"
+                placeholder="Email address"
+                required
+              />
+
+              <button type="submit">Sign Up</button>
+            </form>
+            <p id="newsletter-message"></p>
+          </div>
         </div>
 
         <div class="footer-column">
@@ -149,5 +186,7 @@
     <script src="js/menu-script.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/analytics.js"></script>
+    <script src="js/forms.js"></script>
+    <script src="js/newsletter.js"></script>
   </body>
 </html>

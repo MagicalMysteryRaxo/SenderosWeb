@@ -3,8 +3,8 @@
 require_once "db.php";
 
 $sql = "
-CREATE TABLE site_events (
-  event_id BIGINT AUTO_INCREMENT PRIMARY KEY,
+CREATE TABLE IF NOT EXISTS site_analytics (
+      event_id BIGINT AUTO_INCREMENT PRIMARY KEY,
   visitor_id VARCHAR(100),
   session_id VARCHAR(100),
   event_type VARCHAR(50) NOT NULL,

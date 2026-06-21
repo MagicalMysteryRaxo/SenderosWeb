@@ -1,10 +1,7 @@
 <?php
 header("Content-Type: application/json");
 
-$host = "localhost";
-$dbname = "YOUR_DATABASE_NAME";
-$username = "YOUR_DATABASE_USERNAME";
-$password = "YOUR_DATABASE_PASSWORD";
+require_once "db.php";
 
 try {
 

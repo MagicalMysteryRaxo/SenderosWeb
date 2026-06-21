@@ -11,7 +11,7 @@ newsletterForm.addEventListener("submit", async (e) => {
   newsletterMessage.textContent = "Signing you up...";
 
   try {
-    const response = await fetch("api/subscribe.php", {
+    const response = await fetch("api/newsletter-subscribe.php", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

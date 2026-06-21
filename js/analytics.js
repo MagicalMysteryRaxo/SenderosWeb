@@ -1,8 +1,16 @@
+function makeID() {
+  if (window.crypto && crypto.randomUUID) {
+    return crypto.randomUUID();
+  }
+
+  return "id-" + Date.now() + "-" + Math.random().toString(16).slice(2);
+}
+
 function getOrCreateID(key) {
   let id = localStorage.getItem(key);
 
   if (!id) {
-    id = crypto.randomUUID();
+    id = makeID();
     localStorage.setItem(key, id);
   }
 
@@ -13,7 +21,7 @@ function getSessionID() {
   let sessionID = sessionStorage.getItem("sessionID");
 
   if (!sessionID) {
-    sessionID = crypto.randomUUID();
+    sessionID = makeID();
     sessionStorage.setItem("sessionID", sessionID);
   }
 
@@ -33,11 +41,11 @@ function getDeviceType() {
   return "desktop";
 }
 
-function trackEvent(eventType, extraData = {}) {
+async function trackEvent(eventType, extraData = {}) {
   const eventData = {
     visitorID: getOrCreateID("visitorID"),
     sessionID: getSessionID(),
-    eventType: eventType,
+    eventType,
     pageURL: window.location.href,
     pageTitle: document.title,
     referrer: document.referrer,
@@ -50,24 +58,31 @@ function trackEvent(eventType, extraData = {}) {
     ...extraData,
   };
 
-  fetch("/api/track-event.php", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(eventData),
-  }).catch((error) => {
+  try {
+    const response = await fetch("/api/track-event.php", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(eventData),
+    });
+
+    const result = await response.json();
+    console.log("Analytics response:", result);
+  } catch (error) {
     console.error("Analytics error:", error);
-  });
+  }
 }
 
-trackEvent("page_view");
+document.addEventListener("DOMContentLoaded", () => {
+  trackEvent("page_view");
 
-document.querySelectorAll("[data-track='donate-click']").forEach((button) => {
-  button.addEventListener("click", () => {
-    trackEvent("donate_click", {
-      buttonText: button.innerText.trim(),
-      buttonLocation: button.dataset.location || "unknown",
+  document.querySelectorAll("[data-track='donate-click']").forEach((button) => {
+    button.addEventListener("click", () => {
+      trackEvent("donate_click", {
+        buttonText: button.innerText.trim(),
+        buttonLocation: button.dataset.location || "unknown",
+      });
     });
   });
 });

@@ -11,7 +11,7 @@ newsletterForm.addEventListener("submit", async (e) => {
   newsletterMessage.textContent = "Signing you up...";
 
   try {
-    const response = await fetch("api/newsletter-subscribe.php", {
+    const response = await fetch("/api/newsletter-subscribe.php", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -34,6 +34,7 @@ newsletterForm.addEventListener("submit", async (e) => {
         result.message || "Something went wrong. Please try again.";
     }
   } catch (error) {
-    newsletterMessage.textContent = "Connection error. Please try again.";
+    console.error("Newsletter error:", error);
+    newsletterMessage.textContent = error.message;
   }
 });

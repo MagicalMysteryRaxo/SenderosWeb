@@ -2,7 +2,7 @@
 
 $host = "localhost";
 $user = "u873212447_usr_newchapter";
-$password = "5yZK+IKbt1E=";
+$password = "N^2RJ:9:Rkxy";
 $database = "u873212447_dtb_newchapter";
 
 

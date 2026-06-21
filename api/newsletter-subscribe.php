@@ -2,11 +2,13 @@
 header("Content-Type: application/json");
 
 require_once "db.php";
+var_dump($username);
+exit;
 
 try {
 
     $pdo = new PDO(
-        "mysql:host=$host;dbname=$dbname;charset=utf8mb4",
+        "mysql:host=$host;dbname=$database;charset=utf8mb4",
         $username,
         $password,
         [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]

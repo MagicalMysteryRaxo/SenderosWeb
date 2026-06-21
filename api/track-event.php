@@ -1,16 +1,9 @@
 <?php
 header("Content-Type: application/json");
-
 require_once "db.php";
 
 try {
-    $pdo = new PDO(
-        "mysql:host=$host;dbname=$dbname;charset=utf8mb4",
-        $username,
-        $password,
-        [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
-    );
-
+   
     $data = json_decode(file_get_contents("php://input"), true);
 
     $stmt = $pdo->prepare("

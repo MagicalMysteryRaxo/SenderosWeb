@@ -62,7 +62,7 @@
     <script src="js/menu-script.js"></script>
     <script src="js/analytics.js"></script>
 
-    // Send message code
+    // Send email success message
     <script>
       // Check the URL for parameters when the page loads
       const urlParams = new URLSearchParams(window.location.search);
@@ -74,11 +74,19 @@
         alertBox.style.backgroundColor = "#d4edda"; // Light green
         alertBox.style.color = "#155724"; // Dark green
         alertBox.style.display = "block";
+
+        // Hide the message after 5000 milliseconds (5 seconds)
+        setTimeout(() => {
+          alertBox.style.display = "none";
+        }, 5000);
       } else if (status === "error") {
         alertBox.textContent = "Sorry, something went wrong. Please try again.";
         alertBox.style.backgroundColor = "#f8d7da"; // Light red
         alertBox.style.color = "#721c24"; // Dark red
         alertBox.style.display = "block";
+
+        // Note: We usually leave error messages on screen so the user
+        // has time to read them and figure out what to do next!
       }
     </script>
   </body>

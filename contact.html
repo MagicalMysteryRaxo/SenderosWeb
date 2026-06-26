@@ -62,7 +62,7 @@
     <script src="js/menu-script.js"></script>
     <script src="js/analytics.js"></script>
 
-    // Send email success message
+    <!--  Send email success message  -->
     <script>
       // Check the URL for parameters when the page loads
       const urlParams = new URLSearchParams(window.location.search);
@@ -78,7 +78,7 @@
         // Hide the message after 5000 milliseconds (5 seconds)
         setTimeout(() => {
           alertBox.style.display = "none";
-        }, 5000);
+        }, 4000);
       } else if (status === "error") {
         alertBox.textContent = "Sorry, something went wrong. Please try again.";
         alertBox.style.backgroundColor = "#f8d7da"; // Light red

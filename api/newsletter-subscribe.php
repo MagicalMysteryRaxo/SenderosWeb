@@ -3,7 +3,7 @@ header("Content-Type: application/json");
 
 require_once "db.php";
 
-// Quitamos el var_dump($username) y el exit; para que el código pueda correr.
+
 
 try {
     // Ahora $host, $database, $user y $password vienen limpitas desde db.php

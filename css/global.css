@@ -62,7 +62,7 @@ p {
   align-items: center;
   padding: 15px;
   background-color: #fffdfa;
-  box-shadow: rgba(0, 0, 0, 0.518) 0px 8px 24px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 18px;
 }
 
 .hamburger {

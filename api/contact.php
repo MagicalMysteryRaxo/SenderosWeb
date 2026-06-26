@@ -16,21 +16,24 @@ if (!$name || !$email || !$message) {
     exit;
 }
 
-$to = "connect@newchapterinitiative.org";
+$to = "bonifaceave@yahoo.com"; 
 $subject = "New message to New Chapter";
 
 $body = "Name: $name\n";
 $body .= "Email: $email\n\n";
 $body .= "Message:\n$message\n";
 
-$headers = "From: connect@newchapterinitiative.org\r\n";
+$headers = "From: contact@newchapterinitiative.org\r\n";
 $headers .= "Reply-To: $email\r\n";
 
 $result = mail($to, $subject, $body, $headers);
 
-
 if ($result) {
-    echo "Message sent successfully!";
+    // Redirect back with a success flag
+    header("Location: ../contact.html?status=success");
+    exit;
 } else {
-    echo "Sorry, something went wrong.";
+    // Redirect back with an error flag
+    header("Location: ../contact.html?status=error");
+    exit;
 }

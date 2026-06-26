@@ -30,6 +30,18 @@
         </h2>
 
         <p style="padding: 0; justify-self: center">Send us a quick message</p>
+        <div
+          id="form-alert"
+          style="
+            display: none;
+            padding: 15px;
+            margin-bottom: 20px;
+            text-align: center;
+            border-radius: 5px;
+            font-weight: bold;
+          "
+        ></div>
+
         <form action="api/contact.php" method="POST" class="contact-form">
           <label for="name">Name</label>
           <input type="text" id="name" name="name" required />
@@ -49,5 +61,25 @@
     </footer>
     <script src="js/menu-script.js"></script>
     <script src="js/analytics.js"></script>
+
+    // Send message code
+    <script>
+      // Check the URL for parameters when the page loads
+      const urlParams = new URLSearchParams(window.location.search);
+      const status = urlParams.get("status");
+      const alertBox = document.getElementById("form-alert");
+
+      if (status === "success") {
+        alertBox.textContent = "Message sent successfully!";
+        alertBox.style.backgroundColor = "#d4edda"; // Light green
+        alertBox.style.color = "#155724"; // Dark green
+        alertBox.style.display = "block";
+      } else if (status === "error") {
+        alertBox.textContent = "Sorry, something went wrong. Please try again.";
+        alertBox.style.backgroundColor = "#f8d7da"; // Light red
+        alertBox.style.color = "#721c24"; // Dark red
+        alertBox.style.display = "block";
+      }
+    </script>
   </body>
 </html>

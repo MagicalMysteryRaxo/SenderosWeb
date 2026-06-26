@@ -16,7 +16,7 @@ if (!$name || !$email || !$message) {
     exit;
 }
 
-$to = "bonifaceave@yahoo.com"; 
+$to = "connect@newchapterinitiative.org"; 
 $subject = "New message to New Chapter";
 
 $body = "Name: $name\n";
